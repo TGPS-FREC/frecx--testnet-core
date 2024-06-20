@@ -179,7 +179,7 @@ func (w *wizard) makeGenesis() {
 		genesis.Config.S2PoS.FoudationWalletAddr = w.readDefaultAddress(common.HexToAddress(common.FoudationAddr))
 
 		// Validator Smart Contract Code
-		pKey, _ := crypto.HexToECDSA("d379b132885df778bce2eaaa6ccbb41ffc5fe89a6edde02d8c47e7cca2e60946")
+		pKey, _ := crypto.HexToECDSA("8425446a652555f2aa527b81b2e2d995fd0dcc49624c5bea42452271a4ac2643")
 		addr := crypto.PubkeyToAddress(pKey.PublicKey)
 		contractBackend := backends.NewFRESimulatedBackend(core.GenesisAlloc{addr: {Balance: big.NewInt(1000000000)}}, 10000000, params.TestS2PoSMockChainConfig)
 		transactOpts := bind.NewKeyedTransactor(pKey)
